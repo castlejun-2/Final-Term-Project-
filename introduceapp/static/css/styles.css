@@ -11509,7 +11509,7 @@ body {
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
   }
   #mainNav .nav-link {
     transition: none;
@@ -11606,6 +11606,7 @@ body {
 
 .about-section {
   padding-top: 10rem;
+  padding-bottom: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 .about-section p {
