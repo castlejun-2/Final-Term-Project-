@@ -1,223 +1,242 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>이성준 - Portfolio</title>
+    <title>이성준 - PortPolio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://s3.ap-northeast-2.amazonaws.com/img.castlejun-2.shop/%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84.jpg"
+    />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container px-5">
-        <a class="navbar-brand">이성준`s Portfolio</a>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top">이성준`s PortPolio</a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler navbar-toggler-right"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          Menu
+          <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li style="cursor: pointer" class="nav-item"><a id="home" class="nav-link active">Profile</a></li>
-            <li style="cursor: pointer"class="nav-item"><a id="project" class="nav-link">Project</a></li>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container px-4 px-lg-5 main">
-      <div class="row gx-4 gx-lg-5 align-items-center my-5">
-        <div class="col-lg-3">
-          <img
-            style="height: 40vmin"
-            class="img-fluid rounded mb-4 mb-lg-0"
-            src="https://s3.ap-northeast-2.amazonaws.com/img.castlejun-2.shop/%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84.jpg"
-            alt="..."
-          />
-        </div>
-        <div class="col-lg-5">
-          <h1 class="font-weight-light">SeongJun Lee</h1>
-          <p>
-            <b style="color: green">Github</b>:
-            <a style="text-decoration: none; color: black" href="https://github.com/castlejun-2">https://github.com/castlejun-2</a> <br />
-            <b style="color: green">Tech Blog</b>:
-            <a style="text-decoration: none; color: black" href="https://well-made-codestory.tistory.com/"
-              >https://well-made-codestory.tistory.com/</a
-            >
-            <br />
-            <b style="color: green">Position</b>: Full-Stack Developer(ReactJS + Node.js) <br />
-            <b style="color: green">E-mail</b>: sung0651@naver.com <br />
-            <b style="color: green">Contact</b>: 010-5530-0651 <br />
-            <b style="color: green">University</b>: SoftWare Dept, Dankook Univ <br />
-            <b style="color: green">Date of Birth</b>: 1998-05-15 <br />
-          </p>
-        </div>
-        <div class="col-lg-4">
-        </div>
-      </div>
-      <div class="card text-white bg-secondary my-5 text-center">
-        <div class="card-body">
-          <p style="font-size: 18px" class="text-white m-0">💻Project Summary💻</p>
-        </div>
-      </div>
-      <div class="row gx-4 gx-lg-5">
-        <div class="col-md-4 mb-5">
-          <div class="card h-100">
-            <div class="card-body">
-              <h2 class="card-title">🎀CELEB🎀</h2>
-              <p style="font-size: 14px" class="card-text">
-                <b>소개</b>: 축하 및 기념을 위한 커스터마이징 제품 서비스 <br />
-                <b>기간</b>: 2021.09 ~ 2021.11 <br />
-                <b>포지션</b>: BackEnd <br />
-                <b>수상</b>: 🥉3등 <br />
-              </p>
-              <div style="text-align: center">
-                <img src="{% static 'assets/celeb.png' %}" style="width: 100%; height: 25vmin" />
-              </div>
-            </div>
-            <div class="card-footer">
-              <a style="border-color: gray" class="btn btn-primary btn-sm bg-secondary" href="https://github.com/castlejun-2/CELEB" target="_blank">More Info</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-5">
-          <div class="card h-100">
-            <div class="card-body">
-              <h2 class="card-title">🤝OMG🤝</h2>
-              <p style="font-size: 14px" class="card-text">
-                <b>소개</b>: 취미활동을 위한 오프라인 만남 서비스 <br />
-                <b>기간</b>: 2022.01 ~ 2022.02 <br />
-                <b>포지션</b>: FrontEnd, BackEnd <br />
-                <b>Infra</b>: AWS(EC2,S3,RDS), NAVER(SMS) <br />
-              </p>
-              <div style="text-align: center">
-                <img src="{% static 'assets/omg.png' %}" style="width: 100%; height: 25vmin" />
-              </div>
-            </div>
-            <div class="card-footer">
-              <a style="border-color: gray" class="btn btn-primary btn-sm bg-secondary" href="https://github.com/castlejun-2/Toy-Project/tree/main/OMGProject" target="_blank"
-                >More Info</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-5">
-          <div class="card h-100">
-            <div class="card-body">
-              <h2 class="card-title">👊RESPECT👊</h2>
-              <p style="font-size: 14px" class="card-text">
-                <b>소개</b>: 개발자 포토폴리오 제작 및 공유 서비스 <br />
-                <b>기간</b>: 2021.09 ~ 2021.12 <br />
-                <b>포지션</b>: BackEnd <br />
-                <b>Infra</b>: AWS(EC2,S3,RDS), NAVER(SMS) <br />
-              </p>
-              <div style="text-align: center">
-                <img src="{% static 'assets/respect3.png' %}" style="width: 100%; height: 23vmin" />
-              </div>
-            </div>
-            <div class="card-footer">
-              <a style="border-color: gray" class="btn btn-primary btn-sm bg-secondary" href="https://github.com/chchaeun/RESPECT" target="_blank">More Info</a>
-            </div>
+    <!-- Masthead-->
+    <header class="masthead">
+      <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase">이성준</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Welcome to my portpolio page!</h2>
+            <a class="btn btn-primary" href="#about">Get Started</a>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container px-4 px-lg-5 project" style="display: none">
-      <div style="display: block" class="row gx-4 gx-lg-5">
-        <div style="width: 100%" class="col-md-4 mb-5">
-          <div style="max-width: 700px" class="card h-100">
-            <div class="card-body">
-              <h2 class="card-title">🎀CELEB🎀</h2>
-              <p style="font-size: 14px" class="card-text">
-                <b>개발목적</b> <br />
-                다양한 커스터마이징 제품이 인기를 끌고 있는 상황을 반영하여, 이러한 커스터마이징 주문 제작을 하는 서비스가 시장에 제대로
-                나와 있지 않음을 확인하고, 다양한 주문제작에 맞는 양식을 제공함으로써, 고객에게 편리함을 제공하기 위해 제작 <br />
-                <br /><b>주요기능</b> <br />
-                1. 커스터마이징 제품 등록 <br />
-                2. 커스터마이징 주문서 양식 제공 <br />
-                3. 지역별 필터링 및 검색 기능 제공 <br />
-                4. 판매자 실적 DashBoard 기능 <br />
-                5. 배너 이벤트 광고 기능 <br />
-                6. 인기 스토어 노출 <br />
-                <br /><b>주요화면</b> <br />
-                <div style="text-align: center">
-                    <img src="{% static 'assets/celeb.png' %}" style="width: 600px; height: 300px" />
-                    <img src="{% static 'assets/celeb2.png' %}" style="margin-top: 25px; width: 600px; height: 300px" />
+    </header>
+    <!-- About-->
+    <section class="about-section text-center" id="about">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
+            <p class="text-white-50">
+              Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+              <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
+              The theme is open source, and you can use it for any purpose, personal or commercial.
+            </p>
+          </div>
+        </div>
+        <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
+      </div>
+    </section>
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+      <div class="container px-4 px-lg-5">
+        <!-- Featured Project Row-->
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+          <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>Shoreline</h4>
+              <p class="text-black-50 mb-0">
+                Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download
+                it, customize it, and publish your website!
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Project One Row-->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+          <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." /></div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">Misty</h4>
+                  <p class="mb-0 text-white-50">
+                    An example of where you can put an image of a project, or anything else, along with a description.
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ms-0" />
                 </div>
-                <br /><b>시연영상</b>
-                  <a href="https://drive.google.com/file/d/1epCftv61JCCzhwpGLhuLcY2IYl7yTte9/view" target="_blank">📺</a> <br />
-                  <div style="text-align: center">
-                    <iframe style="margin-top: 15px" src="https://rr4---sn-3pm7dnes.c.drive.google.com/videoplayback?expire=1651758061&amp;ei=rZtzYu21FdWW-LYPvO69WA&amp;ip=220.117.148.216&amp;cp=QVRKU0hfV1BUQlhPOlZlcmRuTWROb2czQjRpZGJYbGw3VTNLcDE4c3IwckdHa2FGZTdrb2VtdkY&amp;id=068d41b833c4790d&amp;itag=18&amp;source=webdrive&amp;requiressl=yes&amp;mh=Sd&amp;mm=32&amp;mn=sn-3pm7dnes&amp;ms=su&amp;mv=m&amp;mvi=4&amp;pl=18&amp;ttl=transient&amp;susc=dr&amp;driveid=1epCftv61JCCzhwpGLhuLcY2IYl7yTte9&amp;app=explorer&amp;mime=video/mp4&amp;vprv=1&amp;prv=1&amp;dur=115.890&amp;lmt=1636928123280743&amp;mt=1651743381&amp;subapp=DRIVE_WEB_FILE_VIEWER&amp;sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&amp;sig=AOq0QJ8wRQIhAIbEyyuNWsK9JSGPEiSOzaOnqG9K1Exw_QUfd7l7xFTHAiAyEQX8x7nWh1m094Xc7DlLbvjnVLyPexAz7mw-ywnV4A==&amp;lsparams=mh,mm,mn,ms,mv,mvi,pl&amp;lsig=AG3C_xAwRAIgKjHvdks1v1cUeo786e2BiUw0z_JFrdIBFSRVjtOmho0CIDWCOpJ_K0IZKDMcOlNGEXlsyPsAIh5PjMaiPPgFl9by&amp;cpn=KeHOV_qFQhqK4Q4v&amp;c=WEB_EMBEDDED_PLAYER&amp;cver=1.20220501.00.01" width="500" height="270"></iframe>
-                  </div>
-              </p>
+              </div>
             </div>
           </div>
         </div>
-        <div style="width: 100%" class="col-md-4 mb-5">
-            <div style="max-width: 700px" class="card h-100">
-              <div class="card-body">
-                <h2 class="card-title">🤝OMG🤝</h2>
-                <p style="font-size: 14px" class="card-text">
-                  <b>개발목적</b> <br />
-                  코로나 팬데믹으로 인해 주춤해진 다양한 온라인 만남을 위한 서비스 제공 <br />
-                  ex) 스포츠(축구, 농구, e-sports), 취미(독서, 카공, 모각코 등) <br />
-                  <br /><b>주요기능</b> <br />
-                  1. Filter 및 Search 기능을 통해 자신이 찾고자 하는 정보만을 검색 <br />
-                  2. SSL Outh를 통한 Https로 통신 <br />
-                  3. 최근 2주의 데이터만 노출시켜, 자신이 원하는 날짜에 올라와있는 만남 노출 <br />
-                  4. 만나는 장소의 위치를 지도 표시 <br />
-                  5. 자신이 작성한 만남들을 스케줄러 정리 <br />
-                  6. 핸드폰 번호를 인증 구현 <br />
-                  7. 프로필 사진 기능(default 포함) <br />
-                  8. Paging 기능 구현 <br />
-                  9. 광고 배너 및 이벤트 구현 <br />
-                  <br /><b>주요화면</b> <br />
-                  <div style="text-align: center">
-                    <img src="{% static 'assets/omg.png' %}" style="width: 600px; height: 300px" />
-                    <img src="{% static 'assets/omg2.png' %}" style="margin-top: 25px; width: 600px; height: 300px" />
-                  </div>
-                  
-                </p>
+        <!-- Project Two Row-->
+        <div class="row gx-0 justify-content-center">
+          <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="..." /></div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 class="text-white">Mountains</h4>
+                  <p class="mb-0 text-white-50">
+                    Another example of a project with its respective description. These sections work well responsively as well, try this
+                    theme on a small screen!
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 me-0" />
+                </div>
               </div>
             </div>
           </div>
-          <div style="width: 100%" class="col-md-4 mb-5">
-            <div style="max-width: 700px" class="card h-100">
-              <div class="card-body">
-                <h2 class="card-title">👊RESPECT👊</h2>
-                <p style="font-size: 14px" class="card-text">
-                  <b>개발목적</b> <br />
-                  개발자들은 포토폴리오를 위해서는, 일반적으로 깃허브에 프로젝트 코드를 올리고 노션에 포토폴리오를 정리한다.<br />
-                  이 때, 자신이 어떤 언어를 많이 사용하고 강점을 갖는지 알 수 없으므로 이러한 장점들을 분석하여 포토폴리오로 제작 할 수 있도록 제작 <br />
-                  <br /><b>주요기능</b> <br />
-                  1. 깃허브 레퍼지토리 분석 <br />
-                  2. 다양한 개발자들의 포토폴리오 비교 <br />
-                  3. 깃허브를 통한 소셜 로그인 <br />
-                  4. 프로젝트 모집 및 참여 <br />
-                  5. 서비스 자체 강의를 통한 수익창출 <br />
-                  <br /><b>주요화면</b> <br />
-                  <div style="text-align: center">
-                    <img src="{% static 'assets/respect.png' %}" style="width: 600px; height: 300px" />
-                    <img src="{% static 'assets/respect2.png' %}" style="margin-top: 25px; width: 600px; height: 300px" />
-                    <img src="{% static 'assets/respect3.png' %}" style="margin-top: 25px; width: 600px; height: 300px" />
-                  </div>
-                </p>
-              </div>
-            </div>
-          </div>
+        </div>
       </div>
-    </div>
-    <footer class="py-5 bg-dark">
-      <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; 이성준 2022</p></div>
+    </section>
+    <!-- Signup-->
+    <section class="signup-section" id="signup">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- * * SB Forms Contact Form * *-->
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- This form is pre-integrated with SB Forms.-->
+            <!-- To make this form functional, sign up at-->
+            <!-- https://startbootstrap.com/solution/contact-forms-->
+            <!-- to get an API token!-->
+            <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+              <!-- Email address input-->
+              <div class="row input-group-newsletter">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    id="emailAddress"
+                    type="email"
+                    placeholder="Enter email address..."
+                    aria-label="Enter email address..."
+                    data-sb-validations="required,email"
+                  />
+                </div>
+                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+              </div>
+              <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
+              <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+              <!-- Submit success message-->
+              <!---->
+              <!-- This is what your users will see when the form-->
+              <!-- has successfully submitted-->
+              <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3 mt-2 text-white">
+                  <div class="fw-bolder">Form submission successful!</div>
+                  To activate this form, sign up at
+                  <br />
+                  <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                </div>
+              </div>
+              <!-- Submit error message-->
+              <!---->
+              <!-- This is what your users will see when there is-->
+              <!-- an error submitting the form-->
+              <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-->
+    <section class="contact-section bg-black">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">+1 (555) 902-8832</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social d-flex justify-content-center">
+          <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+          <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+          <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+      <div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div>
     </footer>
+    <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
     <script src="{% static 'js/scripts.js' %}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>
