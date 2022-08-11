@@ -192,7 +192,7 @@
           <div id="signup" style="padding-top: 20px !important" class="col-md-10 col-lg-8 mx-auto text-center">
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">방명록을 남겨주세요.</h2>
-            <form action="{% url 'createGuestBook' %}" method="POST" data-sb-form-api-token="API_TOKEN">
+            <form method="POST" data-sb-form-api-token="API_TOKEN">
               {% csrf_token %}
 	            <div class="form-signup">
                 <div class="row input-group-newsletter">
