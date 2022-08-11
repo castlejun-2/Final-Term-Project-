@@ -45,9 +45,5 @@ window.addEventListener('DOMContentLoaded', event => {
     changeNickName.disabled = true;
     setNickName.disabled = false;
     inputNickName.disabled = false;
-<<<<<<< Updated upstream
   });
 });
-=======
-  });});
->>>>>>> Stashed changes
