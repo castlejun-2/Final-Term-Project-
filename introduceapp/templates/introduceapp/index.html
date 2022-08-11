@@ -67,7 +67,7 @@
       <div class="container px-4 px-lg-5 mb-4">
         <img
           class="img-fluid mb-4"
-          src="https://s3.ap-northeast-2.amazonaws.com/img.castlejun-2.shop/%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84.jpg"
+          src="https://toyrpsbucket.s3.ap-northeast-2.amazonaws.com/%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84.jpg"
           alt="..."
           style="height: 30vmin"
         />
@@ -192,7 +192,24 @@
           <div id="signup" style="padding-top: 20px !important" class="col-md-10 col-lg-8 mx-auto text-center">
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">방명록을 남겨주세요.</h2>
-            <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <form class="form-signup">
+              <div class="row input-group-newsletter">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    id="guestNickName"
+                    type="text"
+                    placeholder="Set Your NickName..."
+                    aria-label="Set Your NickName..."
+                  />
+                </div>
+              <div class="col-auto">
+                <button class="btn btn-primary" id="submitButton" type="submit">설정</button>
+                <button class="btn btn-primary disabled" id="changeButton" type="submit" style="background-color: #DB0000">변경</button>
+              </div>
+              </div>
+            </form>
+            <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN" style="margin-top: '5px'">
               <div class="row input-group-newsletter">
                 <div class="col">
                   <input

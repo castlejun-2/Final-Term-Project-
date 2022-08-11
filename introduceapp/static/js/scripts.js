@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', event => {
-  var navbarShrink = function () {
+  let navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector('#mainNav');
     if (!navbarCollapsible) {
       return;
@@ -27,5 +27,23 @@ window.addEventListener('DOMContentLoaded', event => {
         navbarToggler.click();
       }
     });
+  });
+  let setNickNameToggler = document.getElementById('setButton');
+  setNickNameToggler.addEventListener('click', function () {
+    let setNickName = document.getElementById('setButton');
+    let changeNickName = document.getElementById('changeButton');
+    let inputNickName = document.getElementById('guestNickName');
+    setNickName.disabled = true;
+    changeNickName.disabled = false;
+    inputNickName.disabled = true;
+  });
+  let changeNickNameToggler = document.getElementById('changeButton');
+  changeNickNameToggler.addEventListener('click', function () {
+    let changeNickName = document.getElementById('changeButton');
+    let setNickName = document.getElementById('setButton');
+    let inputNickName = document.getElementById('guestNickName');
+    changeNickName.disabled = true;
+    setNickName.disabled = false;
+    inputNickName.disabled = false;
   });
 });
