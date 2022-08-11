@@ -229,6 +229,11 @@
                   <div class="fw-bolder">방명록이 작성되었습니다!</div>
                 </div>
               </div>
+              <ul>
+              {% for guestBook in guestBooks%}
+                <li>{{guestBook.name}} | {{guestBook.content}} | {{guestBook.cdate|date:"D d M Y"}}</li>
+              {% endfor%}
+              </ul>
               <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
             </form>
           </div>

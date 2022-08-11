@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from guestBook import *
-import logging
 
 # Create your views here.
-
 def index(request):
     if request.method == 'POST':
-        form = Form()
-        logging.debug(form)
-    return render(request, 'introduceapp/index.html')
+        guestBook = Form(request.POST)
+        if guestBook.is_valid():
+            guestBook.save()
+    guestBooks = GeustBook.objects.all().order_by('-cdate')[:3]        
+    return render(request, 'introduceapp/index.html', {'guestBooks': guestBooks})
