@@ -21,4 +21,5 @@ import introduceapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', introduceapp.views.index, name='index'),   #자기소개 app
+    path('createGuestBook/', introduceapp.views.createGuestBook, name='createGuestBook')
 ]
