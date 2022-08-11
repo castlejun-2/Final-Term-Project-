@@ -8,7 +8,7 @@ def index(request):
 
 def createGuestBook(request):
     if request.method == 'POST':
-        guestBook = Form()
+        guestBook = GeustBook()
         guestBook.name = request.POST['name']
         guestBook.content = request.POST['content']
         guestBook.save()
