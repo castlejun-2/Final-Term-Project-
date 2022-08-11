@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', event => {
   changeNickNameToggler.addEventListener('click', function () {
     let changeNickName = document.getElementById('changeButton');
     let setNickName = document.getElementById('setButton');
-    let inputNickName = document.getElementById('guestNickName');
+    let inputNickName = document.getElementById('name');
     changeNickName.disabled = true;
     setNickName.disabled = false;
     inputNickName.disabled = false;
