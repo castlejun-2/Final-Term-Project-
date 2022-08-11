@@ -192,52 +192,52 @@
           <div id="signup" style="padding-top: 20px !important" class="col-md-10 col-lg-8 mx-auto text-center">
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">방명록을 남겨주세요.</h2>
-            <form method="POST">
-	          <div class="form-signup">
-              <div class="row input-group-newsletter">
-                <div class="col">
-                  <input
-                    class="form-control"
-                    id="guestNickName"
-                    type="text"
-                    placeholder="Set Your NickName..."
-                    aria-label="Set Your NickName..."
-                  />
-                </div>
-              <div class="col-auto">
-                <button class="btn btn-primary" id="setButton" type="submit" style="background-color: #0000ff">SET!</button>
-                <button class="btn btn-primary" id="changeButton" type="submit" style="background-color: #DB0000" disabled>CHANGE!</button>
-              </div>
-              </div>
-            </div>
-            <div class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN" style="margin-top: 5px">
-              <div class="row input-group-newsletter">
-                <div class="col">
-                  <input
-                    class="form-control"
-                    id="emailAddress"
-                    type="text"
-                    placeholder="Enter email address..."
-                    aria-label="Enter email address..."
-                  />
-                </div>
-                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Submit!</button></div>
-              </div>
-              <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-              <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-              <div class="d-none" id="submitSuccessMessage">
-                <div class="text-center mb-3 mt-2 text-white">
-                  <div class="fw-bolder">방명록이 작성되었습니다!</div>
+            <form method="POST" data-sb-form-api-token="API_TOKEN" >
+	            <div class="form-signup">
+                <div class="row input-group-newsletter">
+                  <div class="col">
+                    <input
+                      class="form-control"
+                      id="guestNickName"
+                      type="text"
+                      placeholder="Set Your NickName..."
+                      aria-label="Set Your NickName..."
+                    />
+                  </div>
+                  <div class="col-auto">
+                    <button class="btn btn-primary" id="setButton" type="submit" style="background-color: #0000ff">SET!</button>
+                    <button class="btn btn-primary" id="changeButton" type="submit" style="background-color: #DB0000" disabled>CHANGE!</button>
+                  </div>
                 </div>
               </div>
-              <ul>
-              {% for guestBook in guestBooks%}
-                <li>{{guestBook.name}} | {{guestBook.content}} | {{guestBook.cdate|date:"D d M Y"}}</li>
-              {% endfor%}
-              </ul>
-              <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-            </div>
-          </form>
+              <div class="form-signup" id="contactForm" style="margin-top: 5px">
+                <div class="row input-group-newsletter">
+                  <div class="col">
+                    <input
+                      class="form-control"
+                      id="emailAddress"
+                      type="text"
+                      placeholder="Enter email address..."
+                      aria-label="Enter email address..."
+                    />
+                  </div>
+                  <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Submit!</button></div>
+                </div>
+                <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
+                <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+                <div class="d-none" id="submitSuccessMessage">
+                  <div class="text-center mb-3 mt-2 text-white">
+                    <div class="fw-bolder">방명록이 작성되었습니다!</div>
+                  </div>
+                </div>
+                <ul>
+                {% for guestBook in guestBooks%}
+                  <li>{{guestBook.name}} | {{guestBook.content}} | {{guestBook.cdate|date:"D d M Y"}}</li>
+                {% endfor%}
+                </ul>
+                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
