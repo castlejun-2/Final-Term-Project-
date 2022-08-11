@@ -192,23 +192,24 @@
           <div id="signup" style="padding-top: 20px !important" class="col-md-10 col-lg-8 mx-auto text-center">
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">방명록을 남겨주세요.</h2>
-            <form action="/createGuestBook/" method="POST" data-sb-form-api-token="API_TOKEN" >
+            <form action="{% url 'createGuestBook' %}" method="POST" data-sb-form-api-token="API_TOKEN">
               {% csrf_token %}
 	            <div class="form-signup">
                 <div class="row input-group-newsletter">
                   <div class="col">
                     <input
                       class="form-control"
-                      id="name"
+                      id="guestNickName"
                       name="name"
                       type="text"
                       placeholder="Set Your NickName..."
                       aria-label="Set Your NickName..."
+                      required
                     />
                   </div>
                   <div class="col-auto">
-                    <button class="btn btn-primary" id="setButton" style="background-color: #0000ff">SET!</button>
-                    <button class="btn btn-primary" id="changeButton" style="background-color: #DB0000" disabled>CHANGE!</button>
+                    <button class="btn btn-primary" type="button" id="setButton" style="background-color: #0000ff">SET!</button>
+                    <button class="btn btn-primary" type="button" id="changeButton" style="background-color: #DB0000" disabled>CHANGE!</button>
                   </div>
                 </div>
               </div>
@@ -220,25 +221,32 @@
                       id="content"
                       name="content"
                       type="text"
-                      placeholder="Enter email address..."
-                      aria-label="Enter email address..."
+                      placeholder="Write Guest Book Contents.."
+                      aria-label="Write Guest Book Contents.."
                     />
                   </div>
-                  <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Submit!</button></div>
-                </div>
-                <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                <div class="d-none" id="submitSuccessMessage">
-                  <div class="text-center mb-3 mt-2 text-white">
-                    <div class="fw-bolder">방명록이 작성되었습니다!</div>
+                  <div class="col-auto">
+                    <button class="btn btn-primary" id="submitBtn" type="submit">Submit!</button>
                   </div>
                 </div>
-                <ul>
-                {% for guestBook in guestBooks%}
-                  <li>{{guestBook.name}} | {{guestBook.content}} | {{guestBook.cdate|date:"D d M Y"}}</li>
-                {% endfor%}
-                </ul>
-                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                <table class="mb-3 mt-3 table table-striped">
+                  <thead>
+                    <tr>
+                      <th>작성자</th>
+                      <th>내용</th>
+                      <th>등록일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for guestBook in guestBooks %}
+                      <tr>
+                        <td>{{guestBook.name}}</td>
+                        <td>{{guestBook.contents}}</td>
+                        <td>{{guestBook.cdate|date:"Y-m-d f"}}</td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
               </div>
             </form>
           </div>
@@ -293,8 +301,5 @@
     </footer>
     <!-- Bootstrap core JS-->
     <script src="{% static 'js/scripts.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>

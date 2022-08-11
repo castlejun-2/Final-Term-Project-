@@ -12,13 +12,6 @@ window.addEventListener('DOMContentLoaded', event => {
   };
   navbarShrink();
   document.addEventListener('scroll', navbarShrink);
-  const mainNav = document.body.querySelector('#mainNav');
-  if (mainNav) {
-    new bootstrap.ScrollSpy(document.body, {
-      target: '#mainNav',
-      offset: 74,
-    });
-  }
   const navbarToggler = document.body.querySelector('.navbar-toggler');
   const responsiveNavItems = [].slice.call(document.querySelectorAll('#navbarResponsive .nav-link'));
   responsiveNavItems.map(function (responsiveNavItem) {
@@ -29,21 +22,32 @@ window.addEventListener('DOMContentLoaded', event => {
     });
   });
   let setNickNameToggler = document.getElementById('setButton');
-  setNickNameToggler.addEventListener('click', function () {
+  setNickNameToggler.addEventListener('click', function (e) {
+    e.preventDefault();
     let setNickName = document.getElementById('setButton');
     let changeNickName = document.getElementById('changeButton');
-    let inputNickName = document.getElementById('name');
+    document.getElementById('guestNickName').disabled = true;
     setNickName.disabled = true;
     changeNickName.disabled = false;
-    inputNickName.disabled = true;
   });
   let changeNickNameToggler = document.getElementById('changeButton');
-  changeNickNameToggler.addEventListener('click', function () {
+  changeNickNameToggler.addEventListener('click', function (e) {
+    e.preventDefault();
     let changeNickName = document.getElementById('changeButton');
     let setNickName = document.getElementById('setButton');
     let inputNickName = document.getElementById('name');
     changeNickName.disabled = true;
     setNickName.disabled = false;
     inputNickName.disabled = false;
+  });
+  let submitBtnHandler = document.getElementById('submitBtn');
+  submitBtnHandler.addEventListener('click', function (e) {
+    guestName = document.getElementById('guestNickName');
+    guestName.disabled = false;
+    if (guestName.value === '') {
+      alert('닉네임을 입력해주세요.');
+    } else {
+      alert('방명록이 등록되었습니다.');
+    }
   });
 });
