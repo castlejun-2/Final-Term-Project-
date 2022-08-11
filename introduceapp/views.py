@@ -12,4 +12,4 @@ def createGuestBook(request):
         guestBook.name = request.POST['name']
         guestBook.contents = request.POST['content']
         guestBook.save()
-    return True
+    return redirect('index')
