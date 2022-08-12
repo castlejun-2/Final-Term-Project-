@@ -8,3 +8,9 @@ class GuestBook(models.Model):
     
     def __str__(self):
         return self.name
+
+class Cheering(models.Model):
+    number = 0
+    
+    def __str__(self):
+        return self.number

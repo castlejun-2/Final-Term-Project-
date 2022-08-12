@@ -1,2 +1,4 @@
 djangoConfig/Lib/site-packages
 /db.sqlite3
+introduceapp/migrations
+introduceapp/migrations/__pycache__
