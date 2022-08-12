@@ -50,4 +50,8 @@ window.addEventListener('DOMContentLoaded', event => {
       alert('방명록이 등록되었습니다.');
     }
   });
+  let cheeringBtnHandler = document.getElementById('cheeringBtn');
+  cheeringBtnHandler.addEventListener('click', function (e) {
+    alert('응원해주셔서 감사합니다!');
+  });
 });

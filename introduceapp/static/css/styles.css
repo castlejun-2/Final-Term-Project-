@@ -12076,3 +12076,21 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+.cheerBtn {
+  animation: cheering 3s ease-in Infinite Alternate;
+}
+
+#cheeringBtn {
+  background-color: #fff;
+  color: #495057;
+}
+
+@-webkit-keyframes cheering {
+  0% {
+    margin-left: -300px;
+  }
+  100% {
+    margin-right: -300px;
+  }
+}
