@@ -21,5 +21,6 @@ import introduceapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', introduceapp.views.index, name='index'),   #자기소개 app
-    path('createGuestBook/', introduceapp.views.createGuestBook, name='createGuestBook')
+    path('createGuestBook/', introduceapp.views.createGuestBook, name='createGuestBook'),   #방명록 입력
+    path('cheering/', introduceapp.views.cheering, name='cheering'),    #응원 하기
 ]
