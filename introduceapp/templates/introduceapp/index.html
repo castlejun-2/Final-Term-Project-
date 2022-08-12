@@ -254,7 +254,7 @@
             <form action="{% url 'cheering' %}" method="POST" data-sb-form-api-token="API_TOKEN">
             {% csrf_token %}
             <div class="cheerBtn">
-              <button class="btn btn-primary" id="cheeringBtn" type="submit">Cheering!<br />누적 응원: {{cheeringCnt.number}}</button>
+              <button class="btn btn-primary" id="cheeringBtn" type="submit">Cheering!<br />누적 응원: {{cheeringCnt}}</button>
             </div>
             </form>
           </div>
