@@ -10,7 +10,8 @@ class GuestBook(models.Model):
         return self.name
 
 class Cheering(models.Model):
-    number = 0
+    number = models.IntegerField(default=1)
+    vdate = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.number
+        return str(self.number)
