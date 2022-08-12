@@ -4,7 +4,7 @@ from introduceapp.models import GuestBook, Cheering
 # Create your views here.
 def index(request):
     guestBooks = GuestBook.objects.all().order_by('-cdate')[:4]
-    cheeringCnt = Cheering.objects.all()
+    cheeringCnt = Cheering.objects.all().order_by('number')[:1]
     return render(request, 'introduceapp/index.html', {'guestBooks': guestBooks, 'cheeringCnt': cheeringCnt})
 
 def createGuestBook(request):
