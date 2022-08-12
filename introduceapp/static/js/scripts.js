@@ -35,10 +35,9 @@ window.addEventListener('DOMContentLoaded', event => {
     e.preventDefault();
     let changeNickName = document.getElementById('changeButton');
     let setNickName = document.getElementById('setButton');
-    let inputNickName = document.getElementById('name');
+    document.getElementById('guestNickName').disabled = false;
     changeNickName.disabled = true;
     setNickName.disabled = false;
-    inputNickName.disabled = false;
   });
   let submitBtnHandler = document.getElementById('submitBtn');
   submitBtnHandler.addEventListener('click', function (e) {
